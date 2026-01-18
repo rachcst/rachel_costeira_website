@@ -1,16 +1,23 @@
 ---
+import HTML from "../components/html.astro"
 
+import "../styles/globa.css"
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<HTML>
+		<p>welcome to my website</p>
+		<p>
+			Welcome to my website. Here you can find my 
+
+		</p>
+</HTML>
+
+<style>
+	body{
+		background-image: radial-gradient(#9db2d2 20%, transparent 20%),
+		radial-gradient(#fff0f5 20%, transparent 20%);
+		background-color: #bb8771;
+		background-position: 0 0, 75px 75px;
+		background-size: 30px 30px;
+	}
+</style>
