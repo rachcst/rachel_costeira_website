@@ -23,24 +23,4 @@ Welcome to my _new blog_ about learning Astro! Here, I will share my learning jo
 
 I will finish the Astro tutorial, and then keep adding more posts. Watch this space for more to come.
 
-	body{
-		  background-image:
-    linear-gradient(
-      0deg,
-      rgba(187, 136, 114, 0.6) 0% 12.5%,
-      rgba(255, 240, 245, 0.6) 12.5% 37.5%,
-      rgba(157, 178, 210, 0.6) 37.5% 62.5%,
-      rgba(255, 240, 245, 0.6) 62.5% 87.5%,
-      rgba(187, 136, 114, 0.6) 87.5% 100%
-    ),
-    linear-gradient(
-      90deg,
-      rgba(187, 136, 114, 0.6) 0% 12.5%,
-      rgba(255, 240, 245, 0.6) 12.5% 37.5%,
-      rgba(157, 178, 210, 0.6) 37.5% 62.5%,
-      rgba(255, 240, 245, 0.6) 62.5% 87.5%,
-      rgba(187, 136, 114, 0.6) 87.5% 100%
-    );
-
-  background-size: 80px 80px, 80px 80px;
-	}
+	
