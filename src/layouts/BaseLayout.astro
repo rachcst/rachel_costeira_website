@@ -1,5 +1,6 @@
 ---
-import Header from "../components/header.astro"
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro"
 const { pageTitle } = Astro.props;
 ---
 
@@ -16,7 +17,7 @@ const { pageTitle } = Astro.props;
 		<Header />
 		<div class="main">
 			<slot />
-			<p id="rights">All rights belong to Rachel Costeira. Made with VS Code in 2026</p>
+			<Footer />
 		</div>
 	</body>
 	
