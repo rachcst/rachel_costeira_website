@@ -1,5 +1,6 @@
 ---
-import Header from "./header.astro"
+import Header from "../components/header.astro"
+const { pageTitle } = Astro.props;
 ---
 
 <html lang="en">
@@ -8,13 +9,14 @@ import Header from "./header.astro"
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
+		<title>{pageTitle}</title>
 		<script src="https://kit.fontawesome.com/3744dbacbe.js" crossorigin="anonymous"></script>
 	</head>
 	<body>
 		<Header />
 		<div class="main">
 			<slot />
+			<p id="rights">All rights belong to Rachel Costeira. Made with VS Code in 2026</p>
 		</div>
 	</body>
 	

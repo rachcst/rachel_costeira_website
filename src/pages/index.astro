@@ -1,23 +1,19 @@
 ---
-import HTML from "../components/html.astro"
-
+import BaseLayout from "../layouts/BaseLayout.astro"
+const pageTitle = "Rachel Costeira";
 import "../styles/globa.css"
 ---
 
-<HTML>
-		<p>welcome to my website</p>
-		<p>
-			Welcome to my website. Here you can find my 
-
-		</p>
-</HTML>
+<BaseLayout pageTitle={pageTitle}>
+	<h1>Welcome to my blog!</h1>
+</BaseLayout>
 
 <style>
 	body{
-		background-image: radial-gradient(#9db2d2 20%, transparent 20%),
-		radial-gradient(#fff0f5 20%, transparent 20%);
+		background-image: radial-gradient(#fff0f5 20%, transparent 20%),
+		radial-gradient(#9db2d2 20%, transparent 20%);
 		background-color: #bb8771;
 		background-position: 0 0, 75px 75px;
-		background-size: 30px 30px;
+		background-size: 50px 50px;
 	}
 </style>

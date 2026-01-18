@@ -1,15 +1,24 @@
 ---
-import HTML from "../components/html.astro"
-import Nav from "../components/nav.astro"
+import BaseLayout from "../layouts/BaseLayout.astro"
 import "../styles/globa.css"
+const pageTitle = "About Me";
 ---
 
-<HTML>
-		<p>About me</p>
-
-</HTML>
+<BaseLayout pageTitle={pageTitle}>
+	<h1>About me</h1>
+	<p>Hello, dearest reader! My name is Rachel, and I'm a 21-year-old Brazilian/Portuguese 
+		culinary student based in the UK. I have been around blogging my whole 
+		life - I even had a "travel blog" with my mom when i was 11 and we were
+		moving to Euroupe - so i wanted to create a space for myself in the 
+		internet where i could write and publish about my interests but also 
+		show my work.</p>
+		<p>I'm interested in a variety of topics that include - but not limited to: movies, comic books, fashion, politics, history, programing, gastronomy.
+		</p>
+		<span id="signature">Yours sinceraly, Rachel</span>
+</BaseLayout>
 
 <style>
+
 	body{
 		background: repeating-linear-gradient(
 		90deg,

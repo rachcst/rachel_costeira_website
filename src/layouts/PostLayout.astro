@@ -1,12 +1,17 @@
 ---
-import BaseLayout from "../layouts/baselayout.astro"
+import BaseLayout from "../layouts/BaseLayout.astro"
 import "../styles/globa.css"
-const pageTitle="404 error"
+const pageTitle="Blog Post"
+
+const { frontmatter } = Astro.props;
+
+const { title, description, date, author } = frontmatter;
 ---
 
-<BaseLayout pageTitle={pageTitle}>
-  <h1>404 error</h1>
-
+<BaseLayout pageTitle={title}>
+    <h1>{title}</h1>
+    <p>by {author} - {date}</p>
+    <slot/>
 </BaseLayout>
 <style>
 
