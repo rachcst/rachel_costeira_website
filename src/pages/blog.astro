@@ -4,22 +4,23 @@ import PostCard from "../components/PostCard.astro"
 import "../styles/globa.css"
 const pageTitle = "Blog";
 const allPosts = Object.values(import.meta.glob('./posts/*.md', { eager: true }));
-const tags = ['programming', 'fashion', 'blogging', 'reviews', 'essays', 'recipies']
+const tags = ['reviews', 'essays', 'recipies']
 ---
 <BaseLayout pageTitle={pageTitle}>
-
-  <ul class="tabs">
-    <li class="tab"><a href="/blog/">all posts</a></li>
-    {tags.map((tag) => <li class="tab"><a href={`/tags/${tag}`}>{tag}</a></li>)}
-  </ul>
-
-
-
-
-  
-  {
-    allPosts.map((post: any) => <PostCard url={post.url} title={post.frontmatter.title} date={post.frontmatter.date} author={post.frontmatter.author} />)
-  }
+    <ul class="tabs">
+        <li class="tab"><a href="/blog/">all posts</a></li>
+        {tags.map((tag) => 
+        <li class="tab"><a href={`/tags/${tag}`}>{tag}</a></li>
+        )}
+    </ul>
+    <ul class="tabscontent">
+     {allPosts.map((post: any) => <PostCard 
+        url={post.url} 
+        title={post.frontmatter.title} 
+        date={post.frontmatter.date} 
+        author={post.frontmatter.author} 
+        />)}
+    </ul>
 </BaseLayout>
 
 <style>
