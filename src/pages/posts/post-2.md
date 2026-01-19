@@ -1,7 +1,7 @@
 ---
 layout: "../../layouts/PostLayout.astro"
 title: 'I hate "niche"'
-pubDate: 2022-07-01
+date: 2022-12-01
 description: 'In this current stage of the internet, if you want to create content you must have a "niche". and i hate that, so here is what iam doing instead'
 author: 'Rachel Costeira'
 image:

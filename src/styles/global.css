@@ -1,27 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Homemade+Apple&family=Jacquard+12&family=Jacquarda+Bastarda+9&family=Xanh+Mono:ital@0;1&display=swap');
 
 :root{
-  --pink:#d4a1c5;
-  --red:#801818;
   --brown:#bb8872;
   --blue:#9db2d2;
   --black:#280801;
   --white:#fff0f5;
-
 }
 
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: "Cutive Mono", monospace;
 }
 
-h1{
-		font-family: "Homemade Apple", cursive;
-    color: #280801;
-    font-size: 1.7rem;
-    padding: 1rem;
-	}
+
 
 .header{
   height: 13vh;
@@ -102,10 +95,11 @@ body{
   background-color: var(--white);
   width: 50vw;
   margin-top: 1.5rem;
-  padding: 1rem;
+  padding: 2rem;
   display: flex;
   align-items: center;
   flex-direction: column;
+  border: .5rem var(--blue) solid;
 }
 
 .tag-grid{
@@ -140,4 +134,37 @@ body{
   font-family: "Homemade Apple", cursive;
   font-size: 1.2rem;
   padding: 1rem;
+}
+
+
+.tags{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-evenly;
+}
+.tag a{
+    text-decoration: none;
+      border: 1px var(--blue) solid;
+      padding: .5rem;
+
+}
+.tag p{
+
+}
+
+  .postcard{
+    margin-top: 1.5rem;
+
+  list-style-type: none;
+  padding: 1rem;
+}
+.postcard a{
+    text-decoration: none;
+}
+.postcard-header{
+  margin-bottom: 1rem;
+}
+.postcard-description{
+  margin-bottom: 1rem;
 }

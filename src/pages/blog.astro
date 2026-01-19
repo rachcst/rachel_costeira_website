@@ -16,7 +16,12 @@ const pageTitle = "Blog";
   </div>
 
 
-{allPosts.map((post: any) => <PostCard url={post.url} title={post.frontmatter.title} />)}
+    {allPosts.map((post: any) => <PostCard 
+    url={post.url} 
+    title={post.frontmatter.title}
+    date={post.frontmatter.date}
+    description={post.frontmatter.description}
+    />)}
 </BaseLayout>
 
 <style>

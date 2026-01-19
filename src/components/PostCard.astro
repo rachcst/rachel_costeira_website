@@ -1,4 +1,18 @@
 ---
-const { title, url } = Astro.props
+const { title, url, date, description } = Astro.props
+import { formatDate } from  "../js/utils.js"
+
 ---
-<li><a href={url}>{title}</a></li>
+<li class="postcard">
+    <div class="postcard-header">
+          <a href={url}><h1>{title}</h1></a>
+  <p>{formatDate(date)}</p>
+    </div>
+  <div class="postcard-description">
+    <p>{description}</p>
+  </div>
+  <div class="postcard-footer">
+    <a href={url}>READ THE POST -></a>
+  </div>
+</li>
+
