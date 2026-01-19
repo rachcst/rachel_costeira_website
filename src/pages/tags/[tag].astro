@@ -1,0 +1,40 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PostCard from '../../components/PostCard.astro';
+
+export async function getStaticPaths() {
+    const allPosts = Object.values(import.meta.glob('../posts/*.md', { eager: true }));
+    
+    return [
+        { params: { tag: "programming" }, props: {posts: allPosts}},
+        { params: { tag: "fashion" }, props: {posts: allPosts}},
+        { params: { tag: "reviews" }, props: {posts: allPosts}},
+        { params: { tag: "blogging" }, props: {posts: allPosts}},
+        { params: { tag: "essays" }, props: {posts: allPosts}},
+        { params: { tag: "recipies" }, props: {posts: allPosts}},
+  ];
+}
+
+const { tag } = Astro.params;
+const { posts } = Astro.props;
+const filteredPosts = posts.filter((post: any) => post.frontmatter.tags?.includes(tag));
+
+const tags = ['programming', 'fashion', 'blogging', 'reviews', 'essays', 'recipies']
+---
+<BaseLayout pageTitle={tag}>
+
+      <ul class="tabs">
+    <li class="tab"><a href="/blog/">all posts</a></li>
+    {tags.map((tag) => <li class="tab"><a href={`/tags/${tag}`}>{tag}</a></li>)}
+  </ul>
+
+
+    <ul>
+     {filteredPosts.map((post: any) => <PostCard 
+        url={post.url} 
+        title={post.frontmatter.title} 
+        date={post.frontmatter.date} 
+        author={post.frontmatter.author} 
+        />)}
+  </ul>
+</BaseLayout>

@@ -1,7 +1,7 @@
 ---
 layout: "../../layouts/postlayout.astro"
 title: 'How I designed my blog/website and why'
-pubDate: 2022-07-01
+date: 12-31-2004
 description: 'So, i finally got around to making my own website and here is how i made it from strach. Plus why i made it.'
 author: 'Rachel Costeira'
 image:
