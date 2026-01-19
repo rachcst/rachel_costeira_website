@@ -1,17 +1,13 @@
 ---
 layout: "../../layouts/PostLayout.astro"
 title: 'How I designed my blog/website and why'
-<<<<<<< HEAD
 date: 2022-07-01
-=======
-date: 12-31-2004
->>>>>>> f05d767ea3c611aa631a569e69c765c5b59f2c58
 description: 'So, i finally got around to making my own website and here is how i made it from strach. Plus why i made it.'
 author: 'Rachel Costeira'
 image:
     url: 'https://docs.astro.build/assets/rose.webp'
     alt: 'The Astro logo on a dark background with a pink glow.'
-tags: ["reviews"]
+tags: ["reviews", "blogging", "art"]
 ---
 Welcome to my _new blog_ about learning Astro! Here, I will share my learning journey as I build a new website.
 
