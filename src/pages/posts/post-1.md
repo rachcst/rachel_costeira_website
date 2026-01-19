@@ -1,13 +1,17 @@
 ---
 layout: "../../layouts/PostLayout.astro"
 title: 'How I designed my blog/website and why'
+<<<<<<< HEAD
 date: 2022-07-01
+=======
+date: 12-31-2004
+>>>>>>> f05d767ea3c611aa631a569e69c765c5b59f2c58
 description: 'So, i finally got around to making my own website and here is how i made it from strach. Plus why i made it.'
 author: 'Rachel Costeira'
 image:
     url: 'https://docs.astro.build/assets/rose.webp'
     alt: 'The Astro logo on a dark background with a pink glow.'
-tags: ["programming", "blogging", "astro"]
+tags: ["reviews"]
 ---
 Welcome to my _new blog_ about learning Astro! Here, I will share my learning journey as I build a new website.
 
@@ -23,24 +27,4 @@ Welcome to my _new blog_ about learning Astro! Here, I will share my learning jo
 
 I will finish the Astro tutorial, and then keep adding more posts. Watch this space for more to come.
 
-	body{
-		  background-image:
-    linear-gradient(
-      0deg,
-      rgba(187, 136, 114, 0.6) 0% 12.5%,
-      rgba(255, 240, 245, 0.6) 12.5% 37.5%,
-      rgba(157, 178, 210, 0.6) 37.5% 62.5%,
-      rgba(255, 240, 245, 0.6) 62.5% 87.5%,
-      rgba(187, 136, 114, 0.6) 87.5% 100%
-    ),
-    linear-gradient(
-      90deg,
-      rgba(187, 136, 114, 0.6) 0% 12.5%,
-      rgba(255, 240, 245, 0.6) 12.5% 37.5%,
-      rgba(157, 178, 210, 0.6) 37.5% 62.5%,
-      rgba(255, 240, 245, 0.6) 62.5% 87.5%,
-      rgba(187, 136, 114, 0.6) 87.5% 100%
-    );
-
-  background-size: 80px 80px, 80px 80px;
-	}
+	

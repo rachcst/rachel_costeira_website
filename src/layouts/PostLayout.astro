@@ -1,6 +1,11 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro"
+<<<<<<< HEAD
 import "../styles/global.css"
+=======
+import "../styles/globa.css"
+import { slugify, formatDate } from "../js/utils.js"
+>>>>>>> f05d767ea3c611aa631a569e69c765c5b59f2c58
 const pageTitle="Blog Post"
 
 import { formatDate } from  "../js/utils.js"
@@ -10,9 +15,19 @@ const { title, description, date, author } = frontmatter;
 ---
 
 <BaseLayout pageTitle={title}>
+<<<<<<< HEAD
     <h1>{title}</h1>
     <p>by {author} - {formatDate(date)}</p>
+=======
+  <h1>{title}</h1>
+    <p>by {author} - { formatDate(date) }</p>
+>>>>>>> f05d767ea3c611aa631a569e69c765c5b59f2c58
     <slot/>
+      <div class="tags">
+    {frontmatter.tags.map((tag: string) => (
+      <p class="tag"><a href={`/tags/${tag}`}>{tag}</a></p>
+    ))}
+  </div>
 </BaseLayout>
 <style>
 body {
