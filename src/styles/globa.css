@@ -151,16 +151,14 @@ body{
 
 }
 .tabs .tab{
-  width: 100%;
   background-color: var(--blue);
   padding: 1rem;
   border-top-left-radius: 1rem;
     border-top-right-radius: 1rem;
-margin-left: 0.5rem;
-display: flex ;
-justify-content: center;
+
   
 }
+
 
 
 .tabscontent{
