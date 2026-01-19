@@ -1,5 +1,5 @@
 ---
-layout: "../../layouts/postlayout.astro"
+layout: "../../layouts/PostLayout.astro"
 title: 'I hate "niche"'
 pubDate: 2022-07-01
 description: 'In this current stage of the internet, if you want to create content you must have a "niche". and i hate that, so here is what iam doing instead'

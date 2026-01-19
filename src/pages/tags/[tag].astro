@@ -1,0 +1,59 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PostCard from '../../components/PostCard.astro';
+import "../../styles/global.css";
+
+export async function getStaticPaths() {
+  const allPosts = Object.values(
+    import.meta.glob('../posts/*.md', { eager: true })
+  );
+
+  const uniqueTags = [
+    ...new Set(allPosts.flatMap((post: any) => post.frontmatter.tags || [])),
+  ];
+
+  return uniqueTags.map((tag) => {
+    const filteredPosts = allPosts.filter((post: any) =>
+      post.frontmatter.tags?.includes(tag)
+    );
+
+    return {
+      params: { tag },
+      props: { posts: filteredPosts },
+    };
+  });
+}
+
+const { tag } = Astro.params;
+const { posts } = Astro.props;
+
+// Get all tags for the tag list UI
+const allPosts = Object.values(
+  import.meta.glob('../posts/*.md', { eager: true })
+);
+
+const tags = [
+  ...new Set(allPosts.flatMap((post: any) => post.frontmatter.tags || [])),
+];
+---
+
+<BaseLayout pageTitle={tag}>
+  <div class="tags">
+    {tags.map((t) => (
+      <p class="tag">
+        <a href={`/tags/${t}`}>{t}</a>
+      </p>
+    ))}
+  </div>
+
+  <p>Posts tagged with <strong>{tag}</strong></p>
+
+  <ul>
+    {posts.map((post: any) => (
+      <PostCard
+        url={post.url}
+        title={post.frontmatter.title}
+      />
+    ))}
+  </ul>
+</BaseLayout>

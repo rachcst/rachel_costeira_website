@@ -1,5 +1,5 @@
 ---
-layout: "../../layouts/postlayout.astro"
+layout: "../../layouts/PostLayout.astro"
 title: 'How I designed my blog/website and why'
 pubDate: 2022-07-01
 description: 'So, i finally got around to making my own website and here is how i made it from strach. Plus why i made it.'

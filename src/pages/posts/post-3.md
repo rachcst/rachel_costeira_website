@@ -1,5 +1,5 @@
 ---
-layout: "../../layouts/postlayout.astro"
+layout: "../../layouts/PostLayout.astro"
 title: 'Places they dont tell you about in Brazil'
 pubDate: 2022-07-01
 description: 'All about my December 2025 trip to Brazil + some travel tips'
