@@ -74,10 +74,10 @@ justify-content: space-around;
 
 
 }
-.header .title-container #title{
+.header .title-container a{
   color: var(--white);
   font-family: "Homemade Apple", cursive;
-  font-size: 1.8rem;
+  font-size: 1rem;
   font-weight: 500;
   text-decoration: none;
 }
