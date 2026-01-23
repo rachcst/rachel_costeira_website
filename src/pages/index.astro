@@ -1,19 +1,13 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 const pageTitle = "Rachel Costeira";
+const  pageBackground = "polkadot"
 import "../styles/global.css";
 ---
 
-<BaseLayout pageTitle={pageTitle}>
-	<h1>Welcome to my blog!</h1>
+<BaseLayout pageBackground={pageBackground} pageTitle={pageTitle}>
+	<h1>Hi, I'm Rachel</h1>
+	<p>Welcome to my blog! My name is Rachel, I'm a 21-year-old Brazilian-Portuguese culinary student based in the UK. In this blog you can find all things related to me and my passions, from art and cooking, to programming and fashion.</p>
+	<p>You can also find the links to my social media, though currently I'm quite innactive, but I do plan on posting soon</p>
+	<p>In the <a href="/about/">about me page</a> you can learn more abput me and my interests, but also my skills and experiences. In the <a href="/blog/">blog page</a> you can read my posts about my interests, check out the tags by topic.</p>
 </BaseLayout>
-
-<style>
-	body{
-		background-image: radial-gradient(#fff0f5 20%, transparent 20%),
-		radial-gradient(#9db2d2 20%, transparent 20%);
-		background-color: #bb8771;
-		background-position: 0 0, 75px 75px;
-		background-size: 50px 50px;
-	}
-</style>

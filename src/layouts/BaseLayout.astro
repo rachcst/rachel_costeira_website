@@ -2,6 +2,7 @@
 import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
 const { pageTitle } = Astro.props;
+const { pageBackground } = Astro.props;
 ---
 
 <html lang="en">
@@ -13,7 +14,7 @@ const { pageTitle } = Astro.props;
 		<title>{pageTitle}</title>
 		<script src="https://kit.fontawesome.com/3744dbacbe.js" crossorigin="anonymous"></script>
 	</head>
-	<body>
+	<body class={pageBackground}>
 		<Header />
 		<div class="main">
 			<slot />

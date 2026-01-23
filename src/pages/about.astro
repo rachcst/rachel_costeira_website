@@ -2,9 +2,10 @@
 import BaseLayout from "../layouts/BaseLayout.astro"
 import "../styles/global.css"
 const pageTitle = "About Me";
+const  pageBackground = "stripes"
 ---
 
-<BaseLayout pageTitle={pageTitle}>
+<BaseLayout pageBackground={pageBackground} pageTitle={pageTitle}>
 	<h1>About me</h1>
 	<p>Hello, dearest reader! My name is Rachel, and I'm a 21-year-old Brazilian/Portuguese 
 		culinary student based in the UK. I have been around blogging my whole 
@@ -19,21 +20,5 @@ const pageTitle = "About Me";
 
 <style>
 
-	body{
-		background: repeating-linear-gradient(
-		90deg,
-		#bb8771 0px,
-		#bb8771 30px,
-		#9db2d2 20px,
-		#9db2d2 35px,
-		#bb8771 35px,
-		#bb8771 65px,
-		#fff0f5 65px,
-		#fff0f5 75px,
-		#9db2d2 75px,
-		#9db2d2 80px,
-		#fff0f5 80px,
-		#fff0f5 90px
-		);
-	}
+
 </style>

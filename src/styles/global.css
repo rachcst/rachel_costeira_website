@@ -1,10 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Homemade+Apple&family=Jacquard+12&family=Jacquarda+Bastarda+9&family=Xanh+Mono:ital@0;1&display=swap');
 
 :root{
-  --brown:#bb8872;
-  --blue:#9db2d2;
-  --black:#280801;
-  --white:#fff0f5;
+  --first-color:#86ABCB;
+  --second-color:#885f52;
+  --dark-neutral:#280801;
+  --light-neutral:#E6E0C4;
+
+  --first-transparent:#86ABCB99;
+  --second-transparent:#885f5299;
+  --light-transparent:#E6E0C499;
+  --dark-transparent: #28080199;
 }
 
 *{
@@ -14,12 +19,60 @@
     font-family: "Cutive Mono", monospace;
 }
 
+/* background styles */
 
+.polkadot{
+	background-image: radial-gradient(var(--light-neutral) 20%, transparent 20%),
+	radial-gradient(var(--first-color) 20%, transparent 20%);
+  background-color: var(--second-color);
+	background-position: 0 0, 75px 75px;
+	background-size: 50px 50px;
+}
+
+.gingham{
+  background-image: 
+  linear-gradient(0deg,
+      var(--first-transparent) 0% 12.5%, 
+      var(--second-transparent) 12.5% 37.5%, 
+      var(--light-transparent) 37.5% 62.5%, 
+      var(--second-transparent) 62.5% 87.5%, 
+      var(--first-transparent) 87.5% 100%
+  ),
+    linear-gradient(90deg,
+      var(--first-transparent) 0% 12.5%, 
+      var(--second-transparent) 12.5% 37.5%, 
+      var(--light-transparent) 37.5% 62.5%, 
+      var(--second-transparent) 62.5% 87.5%, 
+      var(--first-transparent) 87.5% 100%
+    );
+
+  background-size: 80px 80px, 80px 80px;
+}
+
+.stripes{
+	background: repeating-linear-gradient(
+	90deg,
+	var(--second-color) 0px,
+	var(--second-color) 30px,
+	var(--first-color) 20px,
+	var(--first-color) 35px,
+	var(--second-color) 35px,
+	var(--second-color) 65px,
+	var(--light-neutral) 65px,
+	var(--light-neutral) 75px,
+	var(--first-color) 75px,
+  var(--first-color) 80px,
+	var(--light-neutral) 80px,
+	var(--light-neutral) 90px
+	);
+}
+
+/*----------------------------*/
 
 .header{
   height: 13vh;
   width: 100vw;
-  background-color: var(--blue);
+  background-color: var(--first-color);
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -36,7 +89,7 @@ justify-content: space-around;
 }
 
 .nav a{
-  color: var(--white);
+  color: var(--light-neutral);
   text-decoration: none;
   font-family: "Cutive Mono", monospace;
   font-size: 1.5rem;
@@ -44,7 +97,7 @@ justify-content: space-around;
 }
 
 .nav a:hover{
-  color: var(--brown);
+  color: var(--second-color);
 }
 
 .social{
@@ -57,12 +110,12 @@ justify-content: space-around;
 }
 
 .social a{
-  color: var(--white);
+  color: var(--light-neutral);
   font-size: 1.5rem;
 }
 
 .social a:hover{
-  color: var(--brown);
+  color: var(--second-color);
 }
 
 .header .title-container{
@@ -75,7 +128,7 @@ justify-content: space-around;
 
 }
 .header .title-container a{
-  color: var(--white);
+  color: var(--light-neutral);
   font-family: "Homemade Apple", cursive;
   font-size: 1rem;
   font-weight: 500;
@@ -92,14 +145,15 @@ body{
 }
 
 .main{
-  background-color: var(--white);
+  background-color: var(--light-neutral);
   width: 50vw;
   margin-top: 1.5rem;
   padding: 2rem;
   display: flex;
   align-items: center;
   flex-direction: column;
-  border: .5rem var(--blue) solid;
+  border: .3rem var(--first-color) solid;
+  border-radius: .5rem;
 }
 
 .tag-grid{
@@ -110,7 +164,7 @@ body{
 }
 
 .tag-grid .tag-container{
-  background-color: var(--blue);
+  background-color: var(--first-color);
   height: 10rem;
   width: 10rem;
   display: flex;
@@ -145,7 +199,7 @@ body{
 }
 .tag a{
     text-decoration: none;
-      border: 1px var(--blue) solid;
+      border: 1px var(--first-color) solid;
       padding: .5rem;
 
 }

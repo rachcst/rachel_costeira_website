@@ -5,9 +5,10 @@ import "../styles/global.css";
 const allPosts = Object.values(import.meta.glob('./posts/*.md', { eager: true }));
 const tags = [...new Set(allPosts.map((post: any) => post.frontmatter.tags).flat())];
 const pageTitle = "Blog";
+const  pageBackground = "gingham"
 ---
 
-<BaseLayout pageTitle={pageTitle}>
+<BaseLayout pageBackground={pageBackground} pageTitle={pageTitle}>
 
   <div class="tags">
     {tags.map((tag) => (
@@ -24,26 +25,5 @@ const pageTitle = "Blog";
     />)}
 </BaseLayout>
 
-<style>
-body {
-  background-image: 
-    linear-gradient(0deg,
-      rgba(157, 178, 210, 0.6) 0% 12.5%, 
-      rgba(187, 136, 114, 0.6) 12.5% 37.5%, 
-      rgba(255, 240, 245, 0.6) 37.5% 62.5%, 
-      rgba(187, 136, 114, 0.6) 62.5% 87.5%, 
-      rgba(157, 178, 210, 0.6) 87.5% 100%
-    ),
-    linear-gradient(90deg,
-      rgba(157, 178, 210, 0.6) 0% 12.5%, 
-      rgba(187, 136, 114, 0.6) 12.5% 37.5%, 
-      rgba(255, 240, 245, 0.6) 37.5% 62.5%, 
-      rgba(187, 136, 114, 0.6) 62.5% 87.5%, 
-      rgba(157, 178, 210, 0.6) 87.5% 100%
-    );
 
-  background-size: 80px 80px, 80px 80px;
-}
-
-</style>
 
